@@ -1,2 +1,14 @@
-<a routerLink="">Exemplu</a>
-<router-outlet></router-outlet>
+<div class="navbar">
+    <div class="logo"><img src="..\assets\web logo.png"></div>
+    <div class="navbar-links">
+        <button mat-flat-button color="primary" class="link-button">Scrape</button>
+        <button mat-button color="primary" class="link-button">My Lists</button>
+        <button mat-button color="primary" class="link-button">My Account</button>
+    </div>
+    <div class="navbar-profile">
+        <button mat-button color="accent" class="profile-button">Sign Out</button>
+    </div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
