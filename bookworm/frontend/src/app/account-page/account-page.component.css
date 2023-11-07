@@ -1,0 +1,33 @@
+.account-page{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.name-title{
+    display:inline-block;
+}
+.profile-pic-container img{
+    width:200px;
+    height:200px;
+    border-radius: 100%;
+    padding: 20px;
+}
+
+.account-info{
+    padding:20px;
+    vertical-align: bottom;
+}
+
+.account-info h1{
+    font-weight: bold;
+    color: #1B91EA;
+    padding: 0px 20px 0px 0px
+}
+
+.account-info .name-title{
+    display: flex;
+}
