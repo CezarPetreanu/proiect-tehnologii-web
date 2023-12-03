@@ -7,9 +7,15 @@ import { ExempluComponent } from './exemplu/exemplu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { AccountPageComponent } from './account-page/account-page.component';
+import { ScrapePageComponent } from './scrape-page/scrape-page.component';
 
 @NgModule({
-  declarations: [AppComponent, ExempluComponent, AccountPageComponent],
+  declarations: [
+    AppComponent,
+    ExempluComponent,
+    AccountPageComponent,
+    ScrapePageComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
