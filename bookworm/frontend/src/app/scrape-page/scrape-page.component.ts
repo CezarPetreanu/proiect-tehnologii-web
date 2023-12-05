@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ThemeService } from '../theme.service';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ThemeService } from '../app-logic/theme.service';
+import { MockDataService } from '../app-logic/mock-data-service.service';
+import { ScrapedItem } from '../../../../backend/scraped-item';
 
 @Component({
   selector: 'app-scrape-page',
@@ -9,14 +10,16 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class ScrapePageComponent {
   isDarkMode: boolean = false;
+  scrapedItems: ScrapedItem[];
 
   constructor(
     public themeService: ThemeService,
-    private sanitizer: DomSanitizer
+    private mockDataService: MockDataService
   ) {
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
     });
+    this.scrapedItems = this.mockDataService.getData();
   }
   /*
   getLogo() {

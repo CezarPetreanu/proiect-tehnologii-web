@@ -7,33 +7,13 @@
             <button mat-raised-button color="primary" class="scrape-button" id="scrape">Scrape!</button>
         </div>
     </div>
-    <div class="results">
+    <div class="results" *ngFor="let item of scrapedItems">
         <div class="result-item">
             <div class="title-and-star">
                 <span class="stars">&#9733;</span>
-                <a href="#" class="title">A dive into Web Scraper world</a>
+                <a href={{item.link}} class="title" target=”_blank”>{{item.title}}</a>
             </div>
-            <p>DK Mahto, L Singh - 2016 3rd International Conference on ... - ieeeexplore.ieee.org</p>
-            <a href="#" class="details-link">View Details</a>
-        </div>
-        
-
-
-        <div class="result-item">
-            <div class="title-and-star">
-                <span class="stars">&#9733;</span>
-                <a href="#" class = "title">A comparative study on web scraping</a>
-            </div>
-            <p>DS Sisuriya - 2015 - rku.ac.lk</p>
-            <a href="#" class="details-link">View Details</a>
-        </div>
-
-        <div class="result-item">
-            <div class="title-and-star">
-                <span class="stars">&#9733;</span>
-                <a href="#" class = "title">Web scraping</a>
-            </div>
-            <p>DS Sisuriya - 2015 - rku.ac.lk</p>
+            <p>{{item.details}}</p>
             <a href="#" class="details-link">View Details</a>
         </div>
     </div>

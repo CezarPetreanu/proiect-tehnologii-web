@@ -10,7 +10,7 @@ import { AccountPageComponent } from './account-page/account-page.component';
 import { ScrapePageComponent } from './scrape-page/scrape-page.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
-import { ThemeService } from './theme.service';
+import { ThemeService } from './app-logic/theme.service';
 import { MyListsComponent } from './my-lists/my-lists.component';
 
 @NgModule({

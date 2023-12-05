@@ -1,5 +1,5 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
-import { ThemeService } from './theme.service';
+import { ThemeService } from './app-logic/theme.service';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
