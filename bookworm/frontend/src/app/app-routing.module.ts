@@ -6,14 +6,20 @@ import { MyListsComponent } from './my-lists/my-lists.component';
 import { ScrapePageComponent } from './scrape-page/scrape-page.component';
 
 const routes: Routes = [
-  { path: '', component: ScrapePageComponent },
+  {
+    path: '',
+    component: ScrapePageComponent,
+    data: { animation: 'ScrapePage' },
+  },
   {
     path: 'account',
     component: AccountPageComponent,
+    data: { animation: 'AccountPage' },
   },
   {
     path: 'lists',
     component: MyListsComponent,
+    data: { animation: 'ListPage' },
   },
 ];
 
