@@ -4,13 +4,31 @@
     vertical-align: middle;
     height: 80px;
     width:100%;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button{
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode button{
+    color:rgb(56, 189, 255);
+}
+
+.dark-mode .profile-button{
+    color:rgb(255, 56, 109);
+}
+
+.dark-mode{
+    background-color: rgb(35, 35, 35);
+    color: white;
 }
 
 .navbar .navbar-links{
-    width: 80%;
+    width: 70%;
 }
 .navbar .navbar-profile{
-    width: 20%;
+    width: 40%;
     text-align: right;
 }
 
@@ -26,6 +44,7 @@
 
 .navbar .logo{
     padding:10px 2% 10px 2%;
+    width: 64px;
 }
 
 .navbar img{

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ThemeService } from '../theme.service';
 
 @Component({
-  selector: 'app-account-page',
-  templateUrl: './account-page.component.html',
-  styleUrls: ['./account-page.component.scss'],
+  selector: 'app-my-lists',
+  templateUrl: './my-lists.component.html',
+  styleUrls: ['./my-lists.component.scss'],
 })
-export class AccountPageComponent {
+export class MyListsComponent {
   isDarkMode: boolean = false;
 
   constructor(public themeService: ThemeService) {

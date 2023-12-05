@@ -8,6 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { AccountPageComponent } from './account-page/account-page.component';
 import { ScrapePageComponent } from './scrape-page/scrape-page.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { ThemeService } from './theme.service';
+import { MyListsComponent } from './my-lists/my-lists.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,17 @@ import { ScrapePageComponent } from './scrape-page/scrape-page.component';
     ExempluComponent,
     AccountPageComponent,
     ScrapePageComponent,
+    MyListsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatSlideToggleModule,
+    MatIconModule,
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,4 +1,4 @@
-<div class="account-page">
+<div class="account-page" [class.dark-mode]="themeService.isDarkMode">
     <div class="profile-pic-container">
         <img src="../../assets/account placeholder.png">
     </div>
@@ -7,6 +7,6 @@
         <p>0 Lists</p>
         <p>0 Scrapings</p>
         <p>0 Scraped Articles</p>
-        <button mat-button color="accent" class="profile-button">Sign Out</button>
+        <button mat-raised-button color="accent" class="profile-button">Sign Out</button>
     </div>
 </div>

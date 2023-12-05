@@ -5,6 +5,12 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode{
+    background-color: rgb(50, 50, 50);
+    color: white;
 }
 
 .name-title{
@@ -25,7 +31,8 @@
 .account-info h1{
     font-weight: bold;
     color: #1B91EA;
-    padding: 0px 20px 0px 0px
+    padding: 0px 20px 0px 0px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .account-info .name-title{

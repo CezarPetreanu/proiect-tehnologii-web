@@ -1,13 +1,12 @@
-<div class="scrape-page">
-    <img src="../../assets/biglogo.png" class="logo">
+<div class="scrape-page" [class.dark-mode]="themeService.isDarkMode">
+    <embed src="../../assets/biglogo.svg" class="logo">
+    <!-- <embed [src]="getLogo()" class="logo"> -->
     <div class="header">
         <div class="search-area">
             <input type="text" placeholder="Search..." id="search">
-            <button mat-raised-button color="primary" id="scrape">Scrape!</button>
+            <button mat-raised-button color="primary" class="scrape-button" id="scrape">Scrape!</button>
         </div>
-        <h2>Web Scraper</h2>
     </div>
-    <hr>
     <div class="results">
         <div class="result-item">
             <div class="title-and-star">

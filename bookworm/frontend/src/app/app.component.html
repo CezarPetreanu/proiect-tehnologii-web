@@ -1,11 +1,14 @@
-<div class="navbar">
-    <div class="logo"><img src="..\assets\web logo.png"></div>
+<div class="navbar" [class.dark-mode]="themeService.isDarkMode">
+    <div class="logo"><embed src="..\assets\web logo.svg"></div>
     <div class="navbar-links">
         <button mat-button color="primary" class="link-button" routerLink="">Scrape</button>
         <button mat-button color="primary" class="link-button" routerLink="lists">My Lists</button>
         <button mat-button color="primary" class="link-button" routerLink="account">My Account</button>
     </div>
     <div class="navbar-profile">
+        <mat-icon>light_mode</mat-icon>
+        <mat-slide-toggle [checked]="isDarkMode" (change)="toggleDarkMode()"></mat-slide-toggle>
+        <mat-icon>dark_mode</mat-icon>
         <button mat-button color="accent" class="profile-button">Sign Out</button>
     </div>
 </div>
