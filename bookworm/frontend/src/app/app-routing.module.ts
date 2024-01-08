@@ -12,6 +12,11 @@ const routes: Routes = [
     data: { animation: 'ScrapePage' },
   },
   {
+    path: 'scrape',
+    component: ScrapePageComponent,
+    data: { animation: 'ScrapePage' },
+  },
+  {
     path: 'account',
     component: AccountPageComponent,
     data: { animation: 'AccountPage' },

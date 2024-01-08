@@ -1,7 +1,8 @@
 export class ScrapedItem {
   id!: number;
   title!: string;
-  details!: string;
+  authors!: string[];
+  year!: number;
   link!: string;
 
   constructor(item?: Partial<ScrapedItem>) {

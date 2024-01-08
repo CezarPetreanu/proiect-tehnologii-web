@@ -9,21 +9,22 @@ export class MockDataService {
     {
       id: 0,
       title: 'A dive into Web Scraper world',
-      details:
-        'DK Mahto, L Singh - 2016 3rd International Conference on ... - ieeeexplore.ieee.org',
+      authors: ['DK Mahto', 'L Singh'],
+      year: 2016,
       link: 'https://ieeexplore.ieee.org/abstract/document/7724353',
     },
     {
       id: 1,
       title: 'A comparative study on web scraping',
-      details: 'DS Sisuriya - 2015 - rku.ac.lk',
+      authors: ['DS Sisuriya'],
+      year: 2016,
       link: 'http://ir.kdu.ac.lk/handle/345/1051',
     },
     {
       id: 2,
       title: 'A review on web scrapping and its applications',
-      details:
-        'V Singrodia, A Mitra, S Paul - 2019 international conference on …, 2019 - ieeexplore.ieee.org',
+      authors: ['V Singrodia', 'A Mitra', 'S Paul'],
+      year: 2019,
       link: 'https://ieeexplore.ieee.org/abstract/document/8821809',
     },
   ];

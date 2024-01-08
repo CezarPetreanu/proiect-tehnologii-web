@@ -12,6 +12,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { ThemeService } from './app-logic/theme.service';
 import { MyListsComponent } from './my-lists/my-lists.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { MyListsComponent } from './my-lists/my-lists.component';
     MatButtonModule,
     MatSlideToggleModule,
     MatIconModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [ThemeService],
   bootstrap: [AppComponent],

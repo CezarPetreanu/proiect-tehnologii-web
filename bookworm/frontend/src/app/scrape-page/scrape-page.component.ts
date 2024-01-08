@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ThemeService } from '../app-logic/theme.service';
 import { MockDataService } from '../app-logic/mock-data-service.service';
 import { ScrapedItem } from '../../../../backend/scraped-item';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-scrape-page',
@@ -9,17 +10,28 @@ import { ScrapedItem } from '../../../../backend/scraped-item';
   styleUrls: ['./scrape-page.component.scss'],
 })
 export class ScrapePageComponent {
-  isDarkMode: boolean = false;
-  scrapedItems: ScrapedItem[];
+  getDetails(item: ScrapedItem) {
+    return item.authors.join(', ') + ', ' + item.year.toString();
+  }
 
-  constructor(
-    public themeService: ThemeService,
-    private mockDataService: MockDataService
-  ) {
+  isDarkMode: boolean = false;
+  searchQuery: string = '';
+  scrapedItems: ScrapedItem[] = [];
+
+  constructor(public themeService: ThemeService, private http: HttpClient) {
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
     });
-    this.scrapedItems = this.mockDataService.getData();
+  }
+
+  search() {
+    const requestBody = { searchQuery: this.searchQuery };
+
+    this.http
+      .post<ScrapedItem[]>('http://127.0.0.1:5000/scrape', requestBody)
+      .subscribe((data) => {
+        this.scrapedItems = data;
+      });
   }
   /*
   getLogo() {

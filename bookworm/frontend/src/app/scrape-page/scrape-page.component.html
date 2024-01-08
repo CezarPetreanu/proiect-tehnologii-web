@@ -3,18 +3,20 @@
     <!-- <embed [src]="getLogo()" class="logo"> -->
     <div class="header">
         <div class="search-area">
-            <input type="text" placeholder="Search..." id="search">
-            <button mat-raised-button color="primary" class="scrape-button" id="scrape">Scrape!</button>
+            <input [(ngModel)]="searchQuery" type="text" placeholder="Search..." id="search">
+            <button (click)="search()" mat-raised-button color="primary" class="scrape-button" id="scrape">Scrape!</button>
         </div>
     </div>
-    <div class="results" *ngFor="let item of scrapedItems">
-        <div class="result-item">
-            <div class="title-and-star">
-                <span class="stars">&#9733;</span>
-                <a href={{item.link}} class="title" target=”_blank”>{{item.title}}</a>
+    <div *ngIf="scrapedItems">
+        <div class="results" *ngFor="let item of scrapedItems">
+            <div class="result-item">
+                <div class="title-and-star">
+                    <span class="stars">&#9733;</span>
+                    <a href={{item.link}} class="title" target=”_blank”>{{item.title}}</a>
+                </div>
+                <p>{{getDetails(item)}}</p>
+                <a href="#" class="details-link">View Details</a>
             </div>
-            <p>{{item.details}}</p>
-            <a href="#" class="details-link">View Details</a>
         </div>
     </div>
 </div>
