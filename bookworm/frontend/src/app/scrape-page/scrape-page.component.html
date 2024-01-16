@@ -1,0 +1,34 @@
+<div class="scrape-page" [class.dark-mode]="themeService.isDarkMode">
+    <embed src="../../assets/biglogo.svg" class="logo">
+    <!-- <embed [src]="getLogo()" class="logo"> -->
+    <div class="header">
+        <div class="search-area">
+            <input [(ngModel)]="searchQuery" type="text" placeholder="Search..." id="search">
+            <button (click)="search()" mat-raised-button color="primary" class="scrape-button" id="scrape">Scrape!</button>
+        </div>
+    </div>
+    <div *ngIf="scrapedItems">
+        <div *ngIf="active" class="status">
+            <p *ngIf="scrapedItems.length == 0">Scraping...</p>
+            <div *ngIf="scrapedItems.length != 0 && paused == false">
+                <p>Running... <b>{{scrapedItems.length}}</b> articles scraped.</p>
+                <button (click)="pause()" mat-raised-button color="primary"><mat-icon>pause</mat-icon>Pause</button>
+                <button (click)="savejson()" mat-raised-button color="primary"><mat-icon>save</mat-icon>Save as JSON</button>
+            </div>
+            <div *ngIf="scrapedItems.length != 0 && paused == true">
+                <p>Paused... <b>{{scrapedItems.length}}</b> articles scraped.</p>
+                <button (click)="pause()" mat-raised-button color="warn"><mat-icon>play_arrow</mat-icon>Run</button>
+                <button (click)="savejson()" mat-raised-button color="primary"><mat-icon>save</mat-icon>Save as JSON</button>
+            </div>
+        </div>
+        <div class="results" *ngFor="let item of scrapedItems">
+            <div class="result-item">
+                <div class="title-and-star">
+                    <span class="stars">&#9733;</span>
+                    <a href={{item.link}} class="title" target=”_blank”>{{item.title}}</a>
+                </div>
+                <p>{{getDetails(item)}}</p>
+            </div>
+        </div>
+    </div>
+</div>
