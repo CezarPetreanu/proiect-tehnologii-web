@@ -1,5 +1,4 @@
 export class ScrapedItem {
-  id!: number;
   title!: string;
   authors!: string[];
   year!: number;

@@ -1,4 +1,5 @@
 .scrape-page{
+  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +39,8 @@
 }
 
 .logo{
-  width:450px;
+  max-width:450px;
+  width:70%;
   padding-top: 50px;
   padding-bottom: 20px;
   align-items: center;
@@ -75,10 +77,13 @@ h2 {
 }
 
 .results {
-  width: 80%;
-  max-width: 800px;
+  align-items: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width:80vw;
+  max-width:800px;
 }
 
 .result-item {
@@ -126,4 +131,9 @@ h2 {
 
 .dark-mode .details-link{
   color: #73b0ff;
+}
+
+.status{
+  align-items: center;
+  text-align: center;
 }
